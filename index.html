@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Consultoría - SM Agencia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            border-bottom: 2px solid #D62839;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .header-left h1 {
+            margin: 0;
+            color: #D62839;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-left p {
+            margin: 5px 0 0;
+            font-style: italic;
+            color: #666;
+        }
+        .header-right {
+            text-align: right;
+        }
+        .logo-img {
+            max-height: 80px;
+            width: auto;
+            display: block;
+            margin-left: auto;
+        }
+        .logo-fallback {
+            display: none;
+            font-weight: bold;
+            color: #D62839;
+            font-size: 1.5em;
+            border: 2px solid #D62839;
+            padding: 5px 15px;
+            text-transform: uppercase;
+        }
+        .client-info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid #D62839;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #D62839;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li::before {
+            content: "•";
+            color: #D62839;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .week-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .week-title {
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .pricing-table th, .pricing-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        .pricing-table th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .total-row td {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #D62839;
+            background-color: #fff0f0;
+        }
+        .bank-details {
+            background-color: #f0f8ff;
+            border: 1px solid #b6d4fe;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .value-prop {
+            background-color: #fff0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        @media print {
+            body { background-color: #fff; padding: 0; }
+            .container { box-shadow: none; padding: 0; }
+            a { text-decoration: none; color: #333; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-left">
+            <h1>Propuesta de Consultoría</h1>
+            <p>Transferencia de Conocimiento y Producción Audiovisual</p>
+        </div>
+        <div class="header-right">
+            <img src="Logo-FB.png" alt="SM Agencia" class="logo-img" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';">
+            <div class="logo-fallback">SM AGENCIA</div>
+            <div style="text-align: right; margin-top: 10px; font-size: 0.9em;">
+                <strong>Fecha:</strong> <span id="fecha-actual"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="client-info">
+        <strong>Proyecto:</strong> "De 0 a 100 en Marketing Digital para tu Clínica"<br>
+        <strong>Cliente:</strong> Dr. Andres Mauricio Lopez<br>
+        <strong>Duración:</strong> 4 Semanas Intensivas (1 Mes)<br>
+        <strong>Modalidad:</strong> Presencial In-House + Soporte WhatsApp
+    </div>
+
+    <p>
+        El objetivo principal de esta consultoría es que, al finalizar el mes, su clínica cuente con un <strong>activo publicitario de alto impacto</strong> y, lo más importante, <strong>autonomía total</strong> para gestionar su presencia digital sin depender eternamente de agencias externas.
+    </p>
+
+    <h2>1. Entregable Audiovisual</h2>
+    <div class="week-block" style="border-left: 4px solid #27ae60;">
+        <span class="week-title" style="color: #27ae60;">VIDEO PROMOCIONAL PROFESIONAL (La Pieza Estrella)</span>
+        <p>Este video será la base de nuestras campañas de anuncios. Incluye:</p>
+        <ul>
+            <li><strong>Guion de Ventas:</strong> Estrategia orientada 100% a la generación de citas.</li>
+            <li><strong>Jornada de Rodaje:</strong> Producción completa en la clínica (Iluminación, dirección, audio).</li>
+            <li><strong>Post-producción Avanzada:</strong> Edición, colorización, música con licencia y subtítulos dinámicos.</li>
+            <li><strong>Formatos:</strong> Entrega optimizada para Reels, Stories y Anuncios.</li>
+        </ul>
+    </div>
+
+    <h2>2. Programa de Capacitación "Clínica Digital" (4 Semanas)</h2>
+    <p>Entrenamiento práctico "Aprender Haciendo". La persona designada trabajará directamente sobre las cuentas reales de la clínica.</p>
+
+    <div class="week-block">
+        <span class="week-title">SEMANA 1: EL MOTOR (Creación de Contenido)</span>
+        <ul>
+            <li>Estructura de videos virales: Gancho + Valor + Llamado a la acción.</li>
+            <li><strong>Dominio de CapCut:</strong> Edición ágil en celular y PC (herramienta estándar del mercado).</li>
+            <li>Uso de <strong>IA</strong> para generación rápida de guiones creativos.</li>
+            <li><em>Tarea Práctica:</em> Grabar y editar 3 videos reales para la clínica.</li>
+        </ul>
+    </div>
+
+    <div class="week-block">
+        <span class="week-title">SEMANA 2: LA ESTRATEGIA (Gestión de Redes)</span>
+        <ul>
+            <li>Optimización de perfil de Instagram y Fanpage de Facebook para convertir visitas en pacientes.</li>
+            <li>Creación de <strong>Parrilla de Contenidos Mensual</strong> (Planificación estratégica).</li>
+            <li>Copywriting persuasivo y uso de Hashtags locales.</li>
+            <li>Programación automática usando <strong>Meta Business Suite</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="week-block">
+        <span class="week-title">SEMANA 3: LA VENTA (Publicidad Digital)</span>
+        <ul>
+            <li>Lanzamiento de campaña real en <strong>Meta Ads</strong> (Instagram/Facebook) usando el video profesional.</li>
+            <li>Segmentación avanzada: Encontrar al paciente ideal en su zona geográfica.</li>
+            <li>Configuración de <strong>Google Ads</strong> (Campaña de Búsqueda) para captar intención de compra.</li>
+        </ul>
+    </div>
+
+    <div class="week-block">
+        <span class="week-title">SEMANA 4: OPTIMIZACIÓN Y AUTONOMÍA</span>
+        <ul>
+            <li>Lectura de métricas clave (CTR, CPC, ROAS) para saber qué funciona.</li>
+            <li>Protocolo de atención al cliente (Leads) vía WhatsApp.</li>
+            <li>Optimización en vivo de las campañas activas.</li>
+            <li>Entrega de manual y grabación de sesiones clave.</li>
+        </ul>
+    </div>
+
+    <h2>3. Inversión y Condiciones</h2>
+    <table class="pricing-table">
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th style="text-align: right;">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Producción Video Promocional Profesional</td>
+                <td style="text-align: right;">$400.000</td>
+            </tr>
+            <tr>
+                <td>Capacitación Intensiva (4 Semanas) + Consultoría + Lanzamiento Campañas</td>
+                <td style="text-align: right;">$1.100.000</td>
+            </tr>
+            <tr class="total-row">
+                <td>TOTAL PAQUETE COMPLETO</td>
+                <td style="text-align: right;">$1.500.000 COP</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 20px;">
+        <strong>Forma de Pago:</strong>
+        <ul>
+            <li>50% al confirmar el proyecto y reservar agenda ($750.000).</li>
+            <li>50% al finalizar la Semana 2 ($750.000).</li>
+        </ul>
+    </div>
+
+    <div class="bank-details">
+        <strong>Datos Bancarios para Consignación:</strong><br>
+        Banco de Bogotá<br>
+        Cuenta de Ahorros No: <strong>249624065</strong><br>
+        Titular: <strong>Luis Alfredo Valbuena Gómez</strong>
+    </div>
+
+    <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-top: 20px; font-size: 0.9em;">
+        <strong>Nota Importante:</strong> El presupuesto de pauta publicitaria (el dinero que se paga a Facebook/Google por mostrar los anuncios) corre por cuenta de la clínica y se paga directamente a las plataformas con su tarjeta corporativa. Se recomienda un presupuesto de inicio entre $200.000 y $400.000 para pruebas.
+    </div>
+
+    <div class="value-prop">
+        <h3>¿Por qué esta inversión es inteligente?</h3>
+        <p>Contratar una agencia externa para estos servicios cuesta entre <strong>$1.8M y $3M mensuales</strong> de por vida. Con este programa, realizan una inversión única y su clínica obtiene autonomía y capacidad instalada para siempre.</p>
+    </div>
+
+    <div class="footer">
+        <p>Quedo atento para coordinar la fecha de inicio y la jornada de grabación.</p>
+        <p>
+            <strong>Luis Alfredo Valbuena</strong><br>
+            Consultor en Estrategia Digital<br>
+            305 220 4103 <br>
+            <a href="https://instagram.com/smagencia.co">@smagencia.co</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('fecha-actual').textContent = new Date().toLocaleDateString('es-ES', dateOptions);
+</script>
+
+</body>
+</html>
